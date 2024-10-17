@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+def minOperations(n):
+    if n <= 0:
+        return 0  # Impossible to achieve
+    
+    operations = 0
+    factor = 2  # Start checking from the first factor greater than 1
+
+    # Loop to find factors of n
+    while n > 1:
+        if n % factor == 0:  #
+            operations += factor
+            n //= factor
+        else:
+            factor += 1
+    
+    return operations
